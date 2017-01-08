@@ -10,8 +10,8 @@ import javax.inject.Named;
  */
 @Named
 @SessionScoped
-public class AloMundo implements Serializable{
-    private String nome;
+public class SaudacaoBean implements Serializable {
+
     private String saudacao;
 
     public String getSaudacao() {
@@ -22,16 +22,4 @@ public class AloMundo implements Serializable{
         this.saudacao = saudacao;
     }
 
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-    
-    public String acaoEnviar() {
-        saudacao = "Alô " + nome + "!";
-        return "saudacao";
-    }
 }
