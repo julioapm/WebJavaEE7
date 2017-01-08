@@ -10,7 +10,7 @@
         <h:form id="formulario">
             Nome:
             <h:inputText id="txtNome" value="#{aloMundo.nome}"/>
-            <h:commandButton id="btEnviar" value="Enviar" actionListener="#{aloMundo.acaoEnviar()}"/>
+            <h:commandButton id="btEnviar" value="Enviar" action="#{aloMundo.acaoEnviar()}"/>
             <br/>
             <h:outputLabel id="lblAlo" rendered="#{not empty aloMundo.saudacao}" value="#{aloMundo.saudacao}"/>
         </h:form>
