@@ -4,6 +4,7 @@ import facin.extensao.ejb2.comum.Catalogo;
 import facin.extensao.ejb2.comum.Produto;
 import java.io.Serializable;
 import java.util.List;
+import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.enterprise.context.SessionScoped;
 import javax.faces.application.FacesMessage;
@@ -42,6 +43,18 @@ public class CatalogoModel implements Serializable {
         return produtosListagem;
     }
 
+    //Alternativa
+    /*
+    @PostConstruct
+    public void incializarDados() {
+        produtosListagem = catalogoEjb.listarTodos();
+    }
+    
+    public List<Produto> getProdutosListagem() {
+        return produtosListagem;
+    }
+    */
+    
     public String salvar() {
         FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Produto alterado com sucesso!", "Produto: " + produtoAtual.getCodigo());
         FacesContext.getCurrentInstance().addMessage(null, msg);
